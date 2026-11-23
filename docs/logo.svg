@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1.8" fill="#f59e0b" fill-opacity="0.7"/>
+    </pattern>
+    <pattern id="stripes" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="14" fill="#f59e0b" fill-opacity="0.45"/>
+    </pattern>
+    <pattern id="grid" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M12 0H0V12" fill="none" stroke="#f59e0b" stroke-opacity="0.45" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="waves" width="24" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 6c3-5 9-5 12 0s9 5 12 0" fill="none" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="1.6"/>
+    </pattern>
+    <pattern id="checker" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="8" height="16" fill="#f59e0b" fill-opacity="0.3"/>
+      <rect width="16" height="8" fill="#f59e0b" fill-opacity="0.3"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 3 x 3 tiles: 76px each, 16px gaps, 30px margin -->
+  <g>
+    <rect x="30"  y="30"  width="76" height="76" rx="12" fill="#0f172a"/>
+    <rect x="30"  y="30"  width="76" height="76" rx="12" fill="url(#dots)"/>
+
+    <rect x="122" y="30"  width="76" height="76" rx="12" fill="#0f172a"/>
+    <rect x="122" y="30"  width="76" height="76" rx="12" fill="url(#glow)"/>
+
+    <rect x="214" y="30"  width="76" height="76" rx="12" fill="#0f172a"/>
+    <rect x="214" y="30"  width="76" height="76" rx="12" fill="url(#stripes)"/>
+
+    <rect x="30"  y="122" width="76" height="76" rx="12" fill="#0f172a"/>
+    <rect x="30"  y="122" width="76" height="76" rx="12" fill="url(#grid)"/>
+
+    <rect x="214" y="122" width="76" height="76" rx="12" fill="#0f172a"/>
+    <rect x="214" y="122" width="76" height="76" rx="12" fill="url(#checker)"/>
+
+    <rect x="30"  y="214" width="76" height="76" rx="12" fill="#0f172a"/>
+    <rect x="30"  y="214" width="76" height="76" rx="12" fill="url(#waves)"/>
+
+    <rect x="122" y="214" width="76" height="76" rx="12" fill="#0f172a"/>
+    <rect x="122" y="214" width="76" height="76" rx="12" fill="url(#stripes)" transform="rotate(90 160 252)"/>
+
+    <rect x="214" y="214" width="76" height="76" rx="12" fill="#0f172a"/>
+    <rect x="214" y="214" width="76" height="76" rx="12" fill="url(#dots)"/>
+  </g>
+
+  <!-- The selected tile: highlighted ring and a check mark -->
+  <rect x="114" y="114" width="92" height="92" rx="18" fill="none" stroke="#556bfc" stroke-width="6"/>
+  <rect x="122" y="122" width="76" height="76" rx="12" fill="#0f172a"/>
+  <rect x="122" y="122" width="76" height="76" rx="12" fill="url(#waves)"/>
+  <circle cx="198" cy="122" r="17" fill="#556bfc"/>
+  <path d="M190 122l6 6 11-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
